@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <title>Ajouter un client</title>
+  </head>
+  <body>
+    <h1>Ajouter un client.</h1>
+    {% if erreur is defined %}
+      <p><b>
+        {{ erreur }}
+      </b></p>
+    {% endif %}
+
+    <form action="/ajouter-client" method="get">
+      <div>
+        <label for="nom">Nom:</label>
+        <input type="text" name="nom" id="nom" required>
+      </div>
+      <div>
+        <label for="telephone">Numéro de téléphone:</label>
+        <input type="text" name="telephone" id="telephone" required>
+      </div>
+      <div>
+        <label for="adresse">Adresse:</label>
+        <input type="text" name="adresse" id="adresse" required>
+      </div>
+      
+      <input type="submit" value="Ajouter client">
+    </form>
+    <a href="/">Retourner à la page d'accueil</a>
+  </body>
+</html>

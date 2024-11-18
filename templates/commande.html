@@ -1,0 +1,80 @@
+<!-- Page pour commander une pizza. -->
+<!-- Saisir les données du client et de la commande. -->
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <title>Commander</title>
+  </head>
+  <body>
+    <h1>Commander</h1>
+    <form action="/resumer-commande" method="get">
+      <div>
+        <label for="client">Client:</label>
+        <select name="client" id="client" required>
+          <option value="" selected>Choisir un client</option>
+            {% for i in clients %}
+                <option value="{{i[0]}}">{{i[1]}} | {{i[2]}} | {{i[3]}}</option>
+            {% endfor %}
+        </select>
+      </div>
+      <div>
+        <label for="croute">Croute:</label>
+        <select name="croute" id="croute" required>
+            <option value="" selected>Choisir une croute</option>
+            {% for i in croutes %}
+                <option value="{{i[0]}}">{{i[1]}}</option>
+            {% endfor %}
+        </select>
+      </div>
+      <div>
+        <label for="sauce">Sauce:</label>
+        <select name="sauce" id="sauce" required>
+            <option value="" selected>Choisir une sauce</option>
+            {% for i in sauces %}
+                <option value="{{i[0]}}">{{i[1]}}</option>
+            {% endfor %}
+        </select>
+      </div>
+      <div>
+        <label for="garniture1">Garniture 1:</label>
+        <select name="garniture1" id="garniture1">
+            <option value="" selected>Choisir une garniture (facultatif)</option>
+            {% for i in garnitures %}
+                <option value="{{i[0]}}">{{i[1]}}</option>
+            {% endfor %}
+        </select>
+      </div>
+      <div>
+        <label for="garniture2">Garniture 2:</label>
+        <select name="garniture2" id="garniture2">
+            <option value="" selected>Choisir une garniture (facultatif)</option>
+            {% for i in garnitures %}
+                <option value="{{i[0]}}">{{i[1]}}</option>
+            {% endfor %}
+        </select>
+      </div>
+      <div>
+        <label for="garniture3">Garniture 3:</label>
+        <select name="garniture3" id="garniture3">
+            <option value="" selected>Choisir une garniture (facultatif)</option>
+            {% for i in garnitures %}
+                <option value="{{i[0]}}">{{i[1]}}</option>
+            {% endfor %}
+        </select>
+      </div>
+      <div>
+        <label for="garniture4">Garniture 4:</label>
+        <select name="garniture4" id="garniture4">
+            <option value="" selected>Choisir une garniture (facultatif)</option>
+            {% for i in garnitures %}
+                <option value="{{i[0]}}">{{i[1]}}</option>
+            {% endfor %}
+        </select>
+      </div>
+        
+      <input type="submit" value="Commander">
+    </form>
+    <a href="/">Retourner à la page d'accueil</a>
+  </body>
+</html>

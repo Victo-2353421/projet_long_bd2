@@ -1,0 +1,47 @@
+<!-- Page pour commander une pizza. -->
+<!-- Saisir les données du client et de la commande. -->
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <title>Résumé de commande</title>
+  </head>
+  <body>
+    <h1>Résumé de commande</h1>
+    <div>
+      <span>Client:</span>
+        <b>{{client[1]}} | {{client[2]}} | {{client[3]}}</b>
+    </div>
+    <div>
+      <span>Croute:</span>
+        <b>{{croute[1]}}</b>
+    </div>
+    <div>
+      <span>Sauce:</span>
+        <b>{{sauce[1]}}</b>
+    </div>
+    <div>
+      <span>Garniture 1:</span>
+        <b>{{garniture1[1]}}</b>
+    </div>
+    <div>
+      <span>Garniture 2:</span>
+        <b>{{garniture2[1]}}</b>
+    </div>
+    <div>
+      <span>Garniture 3:</span>
+        <b>{{garniture3[1]}}</b>
+    </div>
+    <div>
+      <span>Garniture 4:</span>
+        <b>{{garniture4[1]}}</b>
+    </div>
+      
+    <div>
+      <b><a href="/commander?client={{client[0]}}&croute={{croute[0]}}&sauce={{sauce[0]}}&garniture1={{garniture1[0]}}&garniture2={{garniture2[0]}}&garniture3={{garniture3[0]}}&garniture4={{garniture4[0]}}" target="_self">
+        Commander
+      </a></b>
+    </div>
+    <a href="/">Retourner à la page d'accueil</a>
+  </body>
+</html>
